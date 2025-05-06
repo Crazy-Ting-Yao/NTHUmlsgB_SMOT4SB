@@ -42,3 +42,12 @@ model
 python annotations_generator.py
 python run_test.py
 ```
+
+For tracking, change the path in track.py
+```
+coco_json_path = "f"{path to data}/{FILE_NAME}.bbox.json"
+```
+Then run
+```
+./infer.sh
+```
