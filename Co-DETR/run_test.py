@@ -1,13 +1,13 @@
 import subprocess
 from pathlib import Path
 
-config_path = 'Co-DETR/projects/configs/co_deformable_detr/co_deformable_detr_swin_large_900q_3x_smot4sb.py'
-checkpoint_path = 'Co-DETR/model/epoch_12.pth'
+config_path = 'projects/configs/co_deformable_detr/co_deformable_detr_swin_large_900q_3x_smot4sb.py'
+checkpoint_path = 'model/epoch_12.pth'
 output_dir = Path('results_12')
 output_dir.mkdir(parents=True, exist_ok=True)
 
-root_img_dir = Path('Co-DETR/dataset/SMOT4SB/private_test')
-ann_dir = Path('Co-DETR/dataset/SMOT4SB/private_test_anns')
+root_img_dir = Path('dataset/SMOT4SB/private_test')
+ann_dir = Path('dataset/SMOT4SB/private_test_anns')
 
 for folder in sorted(root_img_dir.iterdir()):
     if not folder.is_dir():

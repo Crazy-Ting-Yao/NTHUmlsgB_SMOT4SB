@@ -3,8 +3,8 @@ from pathlib import Path
 from PIL import Image
 
 file_extensions = ["*.jpg", "*.jpeg", "*.png", "*.tif", "*.gif"]
-root_dir = Path("Co-DETR/dataset/SMOT4SB/private_test")
-output_dir = Path("Co-DETR/dataset/SMOT4SB/private_test_anns")
+root_dir = Path("dataset/SMOT4SB/private_test")
+output_dir = Path("dataset/SMOT4SB/private_test_anns")
 output_dir.mkdir(parents=True, exist_ok=True)
 
 for folder in sorted(root_dir.iterdir()):
