@@ -27,6 +27,15 @@ dataset
 　 └ private_test
 ```
 
+### 1.3 Preparing Model
+
+Download model from [here](https://drive.google.com/file/d/1U0FqjEUv9-K7w7vhpXGPdDkOiVZzgE04/view?usp=sharing) and place it under `NTHUmlsgB_SMOT4SB/Co-DETR/model`. The directory structure should look like this:
+
+```bash
+model
+└ epoch_12.pth
+```
+
 ## 2. Run the code
 
 ```
