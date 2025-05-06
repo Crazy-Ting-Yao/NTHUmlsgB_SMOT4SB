@@ -7,6 +7,11 @@ Please use CUDA 11.3.
 ### 1.1 Create Conda Environment
 ```bash
 git clone https://github.com/Crazy-Ting-Yao/NTHUmlsgB_SMOT4SB.git
+conda create --name boxmot python=3.10 -y
+conda activate boxmot
+pip install boxmot
+conda deactivate
+
 conda create --name codetr python=3.8 -y
 conda activate codetr
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113 
@@ -41,13 +46,6 @@ model
 ```
 python annotations_generator.py
 python run_test.py
-```
-
-For tracking, change the path in track.py
-```
-coco_json_path = "f"{path to data}/{FILE_NAME}.bbox.json"
-```
-Then run
-```
+cd ../boxmot
 ./infer.sh
 ```

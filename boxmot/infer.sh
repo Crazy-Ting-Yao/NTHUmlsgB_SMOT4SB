@@ -4,7 +4,7 @@
 PYTHON_SCRIPT="track.py"
 
 # 設定目標資料夾
-DATA_DIR="/home/jingxunlin/SMOT/dataset/SMOT4SB/pub_test/"
+DATA_DIR="../Co-DETR/dataset/SMOT4SB/private_test/"
 
 # 確保資料夾存在
 if [ ! -d "$DATA_DIR" ]; then
@@ -22,4 +22,4 @@ for dir in "$DATA_DIR"/*; do
 done
 
 echo "所有檔案處理完成！"
-python3 "../MVA2025-SMOT4SB/scripts/create_submission.py" -i "pub_test/"
+python3 "../create_submission.py" -i "../Co-DETR/dataset/SMOT4SB/private_test/"

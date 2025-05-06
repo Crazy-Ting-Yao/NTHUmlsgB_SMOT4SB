@@ -15,7 +15,7 @@ if len(sys.argv) < 2:
 FILE_NAME = sys.argv[1]
 frame_to_id = dict()
 
-coco_json_path = f"/media/Pluto/huangtingyao/results/results_{FILE_NAME}.bbox.json"
+coco_json_path = f"../Co-DETR/results_12/results_{FILE_NAME}.bbox.json"
 #coco_json_path = f"/media/Pluto/yanfu/results/results_{FILE_NAME}.bbox.json"
 #coco_json_path = f"/media/Pluto/huangtingyao/detection_results/{FILE_NAME}_train_results.json"
 #coco_json_path = f"/home/jingxunlin/SMOT/dataset/results/results_{FILE_NAME}.bbox.json"
@@ -78,7 +78,7 @@ def create_video_from_images(image_folder, output_video_path, frame_rate=25):
     print(f"Video saved at {output_video_path}")
 
 
-video_dir = f"/home/jingxunlin/SMOT/dataset/SMOT4SB/train/{FILE_NAME}/"
+video_dir = f"../Co-DETR/dataset/SMOT4SB/private_test/{FILE_NAME}/"
 # scan all the JPEG frame names in this directory
 frame_names = [
     p for p in os.listdir(video_dir)
@@ -101,6 +101,8 @@ tracker = ByteTrack(
 
 
 save_dir = './results/'
+if not os.path.exists(save_dir):
+    os.makedirs(save_dir)
 sum = 0
 from tqdm import tqdm
 output_file = f"./val/{FILE_NAME}.txt"
