@@ -47,5 +47,6 @@ model
 python annotations_generator.py
 python run_test.py
 cd ../boxmot
+conda activate boxmot
 ./infer.sh
 ```

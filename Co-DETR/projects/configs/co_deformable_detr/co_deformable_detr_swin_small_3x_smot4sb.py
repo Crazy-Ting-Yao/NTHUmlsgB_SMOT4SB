@@ -1,7 +1,7 @@
 _base_ = [
     'co_deformable_detr_r50_1x_smot4sb.py'
 ]
-pretrained = '/home/yanfu/Co-DETR/swin_small_patch4_window7_224.pth'
+# pretrained = 'model/swin_small_patch4_window7_224.pth'
 # model settings
 model = dict(
     backbone=dict(
@@ -16,7 +16,7 @@ model = dict(
         drop_path_rate=0.4,
         patch_norm=True,
         use_checkpoint=False,
-        pretrained=pretrained),
+        pretrained=None),
     neck=dict(in_channels=[96*2, 96*4, 96*8]))
 
 # optimizer
@@ -24,4 +24,4 @@ optimizer = dict(weight_decay=0.05)
 lr_config = dict(policy='step', step=[30])
 runner = dict(type='EpochBasedRunner', max_epochs=36)
 
-load_from = '/home/yanfu/Co-DETR/co_deformable_detr_swin_small_3x_coco.pth'
+load_from = 'model/small_36.pth'

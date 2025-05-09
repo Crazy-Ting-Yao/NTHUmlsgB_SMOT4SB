@@ -1,8 +1,8 @@
 import subprocess
 from pathlib import Path
 
-config_path = 'projects/configs/co_deformable_detr/co_deformable_detr_swin_large_900q_3x_smot4sb.py'
-checkpoint_path = 'model/epoch_12.pth'
+config_path = 'projects/configs/co_deformable_detr/co_deformable_detr_swin_small_3x_smot4sb.py'
+checkpoint_path = 'model/small_36.pth'
 output_dir = Path('results_12')
 output_dir.mkdir(parents=True, exist_ok=True)
 
