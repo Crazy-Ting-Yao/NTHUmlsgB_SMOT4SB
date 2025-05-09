@@ -38,7 +38,7 @@ Download model from [here](https://drive.google.com/file/d/1Jkr4lK9Dn-Giavzv1ykH
 
 ```bash
 model
-└ epoch_12.pth
+└ small_36.pth
 ```
 
 ## 2. Run the code
@@ -50,3 +50,4 @@ cd ../boxmot
 conda activate boxmot
 ./infer.sh
 ```
+**The final results to be evaluated is the zip file under the `NTHUmlsgB_SMOT4SB/boxmot` folder!**
